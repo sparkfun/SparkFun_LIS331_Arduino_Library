@@ -1,5 +1,5 @@
 #include "SparkFun_LIS331.h"
-#include <SPI.h>
+#include <Wire.h>
 
 LIS331 xl;
 
@@ -7,15 +7,10 @@ void setup()
 {
   // put your setup code here, to run once:
   pinMode(9,INPUT);       // Interrupt pin input
-  pinMode(10, OUTPUT);    // CS for SPI
-  digitalWrite(10, HIGH); // Make CS high
-  pinMode(11, OUTPUT);    // MOSI for SPI
-  pinMode(12, INPUT);     // MISO for SPI
-  pinMode(13, OUTPUT);    // SCK for SPI
-  SPI.begin();
-  xl.setSPICSPin(10);     // This MUST be called BEFORE .begin() so 
+  Wire.begin();
+  xl.setI2CAddr(0x18);    // This MUST be called BEFORE .begin() so 
                           //  .begin() can communicate with the chip
-  xl.begin(LIS331::USE_SPI); // Selects the bus to be used and sets
+  xl.begin(LIS331::USE_I2C); // Selects the bus to be used and sets
                           //  the power up bit on the accelerometer.
                           //  Also zeroes out all accelerometer
                           //  registers that are user writable.
@@ -68,3 +63,4 @@ void loop()
     SerialUSB.println("Interrupt");
   }
 }
+
