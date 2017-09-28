@@ -41,6 +41,7 @@ void LIS331::axesEnable(bool enable)
   }
   LIS331_write(CTRL_REG1, &data, 1);
 }
+
 void LIS331::setPowerMode(power_mode pmode)
 {
   uint8_t data;
@@ -293,26 +294,6 @@ bool LIS331::newZData()
   {
     return false;
   }
-}
-
-void LIS331::intSrcAndEnable(bool enable, uint8_t interrupt)
-{
-  uint8_t data, reg; 
-  if (interrupt == 1)
-  {
-    reg = INT1_CFG;
-  }
-  else
-  {
-    reg = INT2_CFG;
-  }
-  LIS331_read(reg, &data, 1);
-  data &= ~0x80;
-  if (enable)
-  {
-    data |= 1<<7;
-  }
-  LIS331_write(reg, &data, 1);
 }
 
 void LIS331::enableInterrupt(int_axis axis, trig_on_level trigLevel,

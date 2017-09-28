@@ -63,7 +63,6 @@ class LIS331
   bool newXData();
   bool newYData();
   bool newZData();
-  void intSrcAndEnable(bool enable, uint8_t interrupt);
   void enableInterrupt(int_axis axis, trig_on_level trigLevel,
                        uint8_t interrupt, bool enable);
   void setIntDuration(uint8_t duration, uint8_t intSource);
