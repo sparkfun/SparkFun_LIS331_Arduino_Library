@@ -8,7 +8,7 @@ void setup()
   // put your setup code here, to run once:
   pinMode(9,INPUT);       // Interrupt pin input
   Wire.begin();
-  xl.setI2CAddr(0x18);    // This MUST be called BEFORE .begin() so 
+  xl.setI2CAddr(0x19);    // This MUST be called BEFORE .begin() so 
                           //  .begin() can communicate with the chip
   xl.begin(LIS331::USE_I2C); // Selects the bus to be used and sets
                           //  the power up bit on the accelerometer.

@@ -85,9 +85,12 @@ void LIS331::readAxes(int16_t &x, int16_t &y, int16_t &z)
   //  four bits of the data are always zero. We need to right shift by four,
   //  then typecase the upper data to an integer type so it does a signed
   //  right shift.
-  x = data[0]>>4 | (int8_t)data[1]<<4;
-  y = data[2]>>4 | (int8_t)data[3]<<4;
-  z = data[4]>>4 | (int8_t)data[5]<<4;
+  x = data[0] | data[1] << 8;
+  y = data[2] | data[3] << 8;
+  z = data[4] | data[5] << 8;
+  x = x >> 4;
+  y = y >> 4;
+  z = z >> 4;
 }
 
 uint8_t LIS331::readReg(uint8_t reg_address)
