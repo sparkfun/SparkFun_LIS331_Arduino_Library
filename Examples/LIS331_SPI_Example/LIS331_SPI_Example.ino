@@ -55,16 +55,16 @@ void loop()
     xl.readAxes(x, y, z);  // The readAxes() function transfers the
                            //  current axis readings into the three
                            //  parameter variables passed to it.
-    SerialUSB.println(x);
-    SerialUSB.println(y);
-    SerialUSB.println(z);
-    SerialUSB.println(xl.convertToG(6,x)); // The convertToG() function
-    SerialUSB.println(xl.convertToG(6,y)); // accepts as parameters the
-    SerialUSB.println(xl.convertToG(6,z)); // raw value and the current
-    SerialUSB.println(" ");                // maximum g-rating.
+    Serial.println(x);
+    Serial.println(y);
+    Serial.println(z);
+    Serial.println(xl.convertToG(6,x)); // The convertToG() function
+    Serial.println(xl.convertToG(6,y)); // accepts as parameters the
+    Serial.println(xl.convertToG(6,z)); // raw value and the current
+    Serial.println(" ");                // maximum g-rating.
   }
   if (digitalRead(9) == HIGH)
   {
-    SerialUSB.println("Interrupt");
+    Serial.println("Interrupt");
   }
 }
