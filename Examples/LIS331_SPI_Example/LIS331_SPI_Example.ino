@@ -42,7 +42,7 @@ void setup()
                           //  which interrupt source we're configuring,
                           //  and whether to enable (true) or disable
                           //  (false) the interrupt.
-  SerialUSB.begin(115200);
+  Serial.begin(115200);
 }
 
 void loop() 
