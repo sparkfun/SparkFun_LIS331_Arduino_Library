@@ -1,9 +1,7 @@
-SparkFun APDS-9301 Arduino Library
+SparkFun LIS331 Arduino Library
 ==========
-The APDS-9301 is an I2C light sensor capable of returning the current Lux value
-of the local visible light. 
-
-SparkFun does not currently sell a breakout just for the APDS-9301.
+This library supports both the H3LIS331DL high-g accelerometer and the LIS331HH
+low power accelerometer.
 
 Repository Contents
 -------------------
@@ -19,7 +17,7 @@ Documentation
 Version History
 -------------------
 
-* [v 1.0.0](https://github.com/sparkfun/SparkFun_APDS9301_Library/tree/V_1.0.0) - Initial release
+* [v 1.0.0](https://github.com/sparkfun/SparkFun_LIS331_Arduino_Library/tree/V_1.0.0) - Initial release
 
 
 License Information
