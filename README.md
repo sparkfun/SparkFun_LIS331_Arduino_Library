@@ -18,6 +18,7 @@ Version History
 -------------------
 
 * [v 1.0.0](https://github.com/sparkfun/SparkFun_LIS331_Arduino_Library/tree/V_1.0.0) - Initial release
+* [v 1.0.1](https://github.com/sparkfun/SparkFun_LIS331_Arduino_Library/tree/v1.0.1) - Fix to [issue #2](https://github.com/sparkfun/SparkFun_LIS331_Arduino_Library/pull/2).
 
 
 License Information
